@@ -1,0 +1,87 @@
+:root {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    background-color: turquoise;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: blue;
+    text-shadow: 2px 2px black;
+    font-size: 64px;
+}
+
+#nose {
+}
+
+#body {
+    fill: brown;
+}
+
+#wing {
+    fill: pink;
+    transform-origin: 25px 70px;
+}
+
+.flap-wing {
+    animation: flap-wing 1.5s ease-in-out 1;
+}
+
+.eyes > path {
+    transform-origin: 24px 31px;
+    fill: blue;
+    animation: blink 5s linear infinite;
+}
+
+.eyes > .outer {
+    fill: yellow;
+}
+
+svg {
+    height: 300px;
+    width: 500px;
+}
+
+@keyframes flap-wing {
+    40% {
+        transform: rotateZ(90deg) rotateY(180deg);
+    }
+    45% {
+        transform: rotate(95deg) rotateY(180deg);
+    }
+    50% {
+        transform: rotate(85deg) rotateY(180deg);
+    }
+    55% {
+        transform: rotate(95deg) rotateY(180deg);
+    }
+}
+
+@keyframes blink {
+    1% {
+        transform: scaleY(0.2);
+    }
+    3% {
+        transform: scaleY(1);
+    }
+}
+

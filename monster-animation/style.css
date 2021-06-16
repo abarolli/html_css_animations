@@ -1,0 +1,49 @@
+.eyes > .actual-eye {
+    transform-origin: 0px 310px;
+    animation: actual-eye-blink 0.2s 5s linear 2;
+}
+
+
+.eyes > circle {
+    transform-origin: 0 395px;;
+    animation: circle-blink 0.2s 5s linear 2;
+}
+
+
+@keyframes actual-eye-blink {
+    1% {
+        transform: translate(-150px) scaleY(0.2);
+    }
+    /* 1.5% {
+        transform: translate(-150px -400px) scaleY(0.9);
+    } */
+}
+
+@keyframes circle-blink {
+    1% {
+        transform: scaleY(0.2);
+    }
+}
+
+:root {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+
+div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
