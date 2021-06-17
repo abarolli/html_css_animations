@@ -28,7 +28,7 @@ svg {
 
 #torso {
     transform-origin: 400px 0px;
-    animation: idle-torso var(--animation-length) ease-in-out 1s infinite;
+    animation: idle-torso var(--animation-length) ease-in 1s infinite;
 }
 
 #head {
@@ -38,12 +38,12 @@ svg {
 
 #left-leg {
     transform-origin: 340px 500px;
-    animation: idle-legs var(--animation-length) ease-in-out 0.99s infinite;
+    animation: idle-legs var(--animation-length) ease-in 0.99s infinite;
 }
 
 #right-leg {
     transform-origin: 440px 500px;
-    animation: idle-legs var(--animation-length) ease-in-out 0.99s infinite;
+    animation: idle-legs var(--animation-length) ease-in 0.99s infinite;
 }
 
 #human-baby {
@@ -54,6 +54,12 @@ svg {
 #panda-baby {
     transform-origin: 410px 515px;
     animation: idle-torso-babies var(--animation-length) linear 1.02s infinite;
+}
+
+
+#pupils {
+    transform-origin: 415px 0px;
+    /* animation: shifty-eyes 1s linear infinite; */
 }
 
 @keyframes blink {
@@ -149,4 +155,20 @@ svg {
     100% {
         transform: scaleY(1);
     }
+}
+
+@keyframes shifty-eyes {
+    0% {
+        transform: translateX(0px);
+    }
+    33% {
+        transform: translateX(5px);
+    }
+    66% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+
 }
